@@ -1,0 +1,84 @@
+name: Copyright
+description: Display Ramblers copyright information.
+type: particle
+icon: fa-copyright
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable to the particles.
+      default: true
+
+    mode:
+      type: input.radios
+      label: Copyright
+      description: Size of Copyright message
+      default: full
+      options:
+        full: Full
+        short: Short
+        none: None
+
+    ramblerswebs:
+      type: input.checkbox
+      label: Ramblers Webs
+      description: Display reference to RamblersWebs hosting
+      default: true
+
+    ramblerswebstarget:
+      type: select.selectize
+      label: Privacy Target
+      description: Target Browser Windows when Ramblers Webs link is clicked
+      placeholder: 'Select....'
+      default: _blank
+      options:
+        _blank: 'New Window'
+        _parent: 'Self'
+        _self: 'Same Frame'
+        _top: 'Full Window Body'
+
+    ramblersprivacy:
+      type: input.checkbox
+      label: Ramblers Privacy
+      description: Include Ramblers Privacy Policy
+      default: true
+
+    ramblersprivacytarget:
+      type: select.selectize
+      label: Privacy Target
+      description: Target Browser Windows when Ramblers Privacy link is clicked
+      placeholder: 'Select....'
+      default: _blank
+      options:
+        _blank: 'New Window'
+        _parent: 'Self'
+        _self: 'Same Frame'
+        _top: 'Full Window Body'
+
+    text:
+      type: textarea.textarea
+      label: Copyright Text
+      description: Copyright Text to display
+
+    date.start:
+      type: input.text
+      label: Start Year
+      description: Select the copyright start year.
+      default: now
+
+    date.end:
+      type: input.text
+      label: End Year
+      description: Select the copyright end year.
+      default: now
+
+    css.class:
+      type: input.text
+      label: Class
+      description: CSS class name for the particle.

@@ -1,0 +1,67 @@
+#g-copyright {
+	background-color: $copyright-background;
+	font-size: 0.9em !important ;
+    padding: 0;
+    margin: 0;
+
+    .g-content {
+        padding: 0;
+    }
+/*
+	@if $copyright-image {
+    	background-image: url($copyright-image);
+	}
+*/
+	color: $copyright-text-color;
+
+	a {
+		color: $accent-color-1;
+		font-weight: bold;
+		&:hover {
+			color: darken($accent-color-1, 10%);
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6, strong {
+		color: $copyright-text-color;
+	}
+
+	.button {
+		background: $accent-color-2;
+		color: $copyright-text-color;
+		&:hover {
+			background: lighten($accent-color-2, 5%);
+		}
+		&:active {
+			background: darken($accent-color-2, 5%);
+		}
+	}
+
+	.g-social {
+		a {
+			background: darken($copyright-background, 6%);
+			border: none;
+			color: $copyright-text-color;
+			transition: background 0.2s;
+			&:hover {
+				background: lighten($copyright-background, 6%);
+			}
+		}
+	}
+
+		/* This specific to the Gantry Particle */
+	#racopyright_particle {
+		width: 100%;
+		display: -webkit-flex;
+		-webkit-justify-content: space-between;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+@media print {
+	#g-copyright {
+		background: #fff !important;
+		color: #000 !important;
+	}
+}

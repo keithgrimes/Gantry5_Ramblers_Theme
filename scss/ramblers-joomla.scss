@@ -1,0 +1,199 @@
+// REQUIRED DEPENDENCIES - DO NOT CHANGE
+
+// Load Third Party Libraries
+//FIXME Remove deprecated bourbon mixins
+$output-bourbon-deprecation-warnings: false;
+@import "vendor/bourbon/bourbon";
+
+// Load Nucleus Configuration
+@import "configuration/nucleus/base";
+
+// Load Nucleus Mixins and Functions
+@import "nucleus/functions/base";
+@import "nucleus/mixins/base";
+
+// Load Optional Nucleus Assets
+@import "nucleus/theme/alerts";
+
+// Load Theme Variable Driven Nucleus Elements
+@import "joomla/theme/base";
+
+// Load Template Configuration
+@import "configuration/base";
+
+//-------------------------------------------
+
+// JOOMLA TEMPLATE SPECIFIC
+@import "ramblers-joomla/core";
+@import "ramblers-joomla/typography";
+@import "ramblers-joomla/forms";
+@import "ramblers-joomla/buttons";
+@import "ramblers-joomla/tabs";
+@import "ramblers-joomla/utilities";
+
+//-------------------------------------------
+
+// BREAKPOINTS
+@import "joomla/theme/breakpoints/base";
+
+//-------------------------------------------
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&display=swap');
+
+@import "mixins/nav";
+
+/*
+@import "ramblers-joomla/icons";
+@import "ramblers-joomla/link";
+@import "ramblers-joomla/modules";
+@import "ramblers-joomla/raheader";
+*/
+@import "ramblers-joomla/tables";
+
+body {
+    font-size: $main-font-size;
+}
+
+h1, h2, h3, h4, h5, h6 { margin: 0 0 15px 0; }
+
+h2 {
+    font-size: 175%;
+}
+
+h3 {
+    font-size: 140%;
+}
+
+p { margin: 0 0 15px 0 ;}
+
+p, a {
+    word-wrap: break-word ;
+}
+
+#g-main {
+    padding: 0px;
+}
+
+.g-offcanvas-toggle {
+    color: $navigation-submenu-color;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.preformat {
+    background: none repeat scroll 0 0 #ffffd5;
+    border-left: 5px solid #404040;
+    padding: 1em;
+}
+.text-highlight {
+    background: none repeat scroll 0 0 #ffffaa;
+    padding: 0.2em 0.5em;
+}
+
+/* =============== LAYOUT - OVERALL PAGE =============== */
+/* Hide Jguard footer */
+
+span#sgfooter {
+    display: none;
+}
+
+legend.hidelabeltxt {
+    display: none;
+}
+/* class to hide sections*/
+
+/*
+@media only screen and (max-width: 768px){
+    div#ramblersheader {
+        background-image:none !important;
+    }
+}
+*/
+
+/* enable RokNavMenu menu to be displayed */
+@media (max-width: 767px) {
+    .gf-menu-device-container.responsive-type-panel ~ ul.gf-menu {
+        display: initial;
+    }
+}
+
+/* Kunena forum user status*/
+div.userkunenalistempty {
+    color: var(--pantone1815);
+    font-weight: 900
+}
+
+div.userkunenalist {
+    color: #000000;
+}
+
+ul.userkunenacatorgories li {
+    color:   var(--pantone0555);
+    list-style-type: square;
+    font-weight: 800
+}
+/* fix for JSN Uniform date input */
+.jsn-daterangepicker  {
+    width: calc(50% - 44px);
+}
+section#g-top {
+    div.g-block div.g-content {
+        padding: 0px;
+        margin: 0px;
+    }
+/*
+    h2#ramblerssubtitle {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 160px ;
+        margin-right: 0px ;
+        padding: 0 0 0 0;
+    }
+    div#ramblersheader {
+        height: 100px ;
+    }
+*/
+}
+
+.button
+{
+    @include main-nav-colors($navigation-background, $navigation-text-color, $main-background, $main-text-color);
+    color: $navigation-text-color;
+}
+
+.plg_system_webauthn_login_button svg {
+    width: 30px;
+    margin: 4px;
+    }
+
+/*
+div.nextwalk {
+    margin-bottom: 5px;
+}
+
+#g-top {
+    h1#ramblerstitle {
+        margin-top: 0px;
+    }
+}
+
+.cancelled {
+    color:var(--cancelled);
+    text-decoration: line-through;
+}
+
+.ramblers-remove {
+    display: none;
+    padding: 0px;
+}
+
+div.ra_fullwidth {
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: bottom;
+}
+*/
+

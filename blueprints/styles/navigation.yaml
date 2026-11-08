@@ -1,0 +1,32 @@
+name: Navigation Colors
+description: Navigation colors for the Ramblers theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#439a86"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#ffffff"
+    font-size:
+      type: input.text
+      label: Font Size
+      default: "15px"
+    submenu-color:
+      type: input.colorpicker
+      label: Menu Color
+      default: "#ffffff"
+    activemenu-color:
+      type: input.colorpicker
+      default: "#ffffff"
+      label: Active Menu
+#    overlay:
+#      type: input.colorpicker
+#      label: Overlay
+#      description: Set the color of the page overlay when the certain menu modes are active.
+#      default: "rgba(0, 0, 0, 0.4)"

@@ -1,0 +1,9 @@
+ramblers-theme:
+  title: 'Ramblers Theme'
+  description: 'Sample menu for Ramblers theme.'
+
+  items:
+    ramblers:
+      title: 'Home'
+      outline: home
+      home: 1
