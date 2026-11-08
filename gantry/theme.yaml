@@ -20,8 +20,8 @@ details:
   license: GPLv2
   description: Ramblers Theme
   images:
-    thumbnail: admin/images/preset1.png
-    preview: admin/images/preset1.png
+    thumbnail: admin/images/ramblers-mintcake-granite.png
+    preview: admin/images/ramblers-mintcake-granite.png
 
 configuration:
   gantry:
