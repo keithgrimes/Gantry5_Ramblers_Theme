@@ -1,0 +1,36 @@
+name: Create a Release for the g5_ramblers Joomla Template
+run-name: ${{ github.actor }} is creating a release 🚀
+on:
+  push:
+    branches: 
+      - main 
+jobs:
+  Create-Release:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+
+      - name: Move to the working directory
+        run: pushd ${{ github.workspace }}
+      - name: Get Version for the Release
+        run: php .github/workflows/GetReleaseDetail.php g5_ramblers/templateDetails.xml version VERSION
+      - name: show the version found
+        run: echo "Version Found is ${{ env.VERSION }}"
+      - name: Compress the g5_ramblers directory into a zip file
+        run: zip -r Ramblers-Theme-Installation-${{ env.VERSION }}.zip g5_ramblers 
+      - name: List the files in the repository
+        run: ls -al
+
+      - name: Create GitHub Release with Auto-Generated Notes
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ env.VERSION }}
+          name: ${{ env.VERSION }}
+          generateReleaseNotes: true  # Auto-generate release notes based on PRs and commits
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: "Ramblers-Theme-Installation-${{ env.VERSION }}.zip"
