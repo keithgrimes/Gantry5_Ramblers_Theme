@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <extension version="3.9" type="template" client="site" method="upgrade">
     <name>g5_ramblers</name>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <creationDate>November 8, 2026</creationDate>
     <author>Ramblers Websites</author>
     <authorEmail>support@ramblers-websites.zendesk.com</authorEmail>
