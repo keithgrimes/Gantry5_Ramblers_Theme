@@ -21,6 +21,11 @@
 		color: $top-text-color;
 	}
 
+   div.g-block div.g-content {
+       padding: 0px;
+       margin: 0px;
+   }
+
 	.button {
 		background: $accent-color-2;
 		color: $top-text-color;
