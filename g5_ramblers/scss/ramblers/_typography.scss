@@ -61,3 +61,32 @@ pre {
 hr {
 	border-bottom: 4px solid $rule-color;
 }
+
+
+// Additions
+body {
+    font-size: $main-font-size;
+}
+
+h1, h2, h3, h4, h5, h6 { margin: 0 0 15px 0; }
+
+h2 {
+    font-size: 175%;
+}
+
+h3 {
+    font-size: 140%;
+}
+
+p { margin: 0 0 15px 0 ;}
+
+p, a {
+    word-wrap: break-word ;
+}
+
+.text-highlight {
+    background: none repeat scroll 0 0 #ffffaa;
+    padding: 0.2em 0.5em;
+}
+
+
