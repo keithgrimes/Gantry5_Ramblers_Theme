@@ -18,11 +18,11 @@ jobs:
       - name: Move to the working directory
         run: pushd ${{ github.workspace }}
       - name: Get Version for the Release
-        run: php .github/workflows/GetReleaseDetail.php g5_ramblers/templateDetails.xml version VERSION
+        run: php .github/workflows/GetBuildVersion.php g5_ramblers/templateDetails.xml ${{ github.ref }} version VERSION
       - name: show the version found
         run: echo "Version Found is ${{ env.VERSION }}"
       - name: Compress the g5_ramblers directory into a zip file
-        run: zip -r Ramblers-Theme-Installation-${{ env.VERSION }}.zip g5_ramblers 
+        run: zip -r Ramblers-Theme-${{ env.VERSION }}.zip g5_ramblers 
       - name: List the files in the repository
         run: ls -al
 
@@ -33,4 +33,4 @@ jobs:
           name: ${{ env.VERSION }}
           generateReleaseNotes: true  # Auto-generate release notes based on PRs and commits
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: "Ramblers-Theme-Installation-${{ env.VERSION }}.zip"
+          artifacts: "Ramblers-Theme-${{ env.VERSION }}.zip"

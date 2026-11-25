@@ -8,6 +8,10 @@
 	color: $main-text-color;
 }
 
+#g-main {
+    padding: 0px;
+}
+
 @media print {
 	#g-main {
 		background: #fff !important;
