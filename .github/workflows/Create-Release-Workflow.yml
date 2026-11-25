@@ -1,9 +1,6 @@
 name: Create a Release for the g5_ramblers Joomla Template
 run-name: ${{ github.actor }} is creating a release 🚀
-on:
-  push:
-    branches: 
-      - main 
+on: push
 jobs:
   Create-Release:
     runs-on: ubuntu-latest
