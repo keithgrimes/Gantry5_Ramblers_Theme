@@ -1,17 +1,17 @@
 details:
   name: Ramblers
-  version: 1.0.0
+  version: 0.0.3
   icon: paper-plane
   author:
     name: Ramblers Websites
     email: support@ramblers-websites.zendesk.com
-    link: https://ramnblers-webs.org.uk
+    link: https://ramblers-webs.org.uk
 
   documentation:
     link: https://ramblers-webs.org.uk
 
   support:
-    link: https://gitter.im/gantry/gantry5
+    link: https://ramblers-webs.org.uk
 
   updates:
     link: http://updates.rockettheme.com/themes/ramblers.yaml
